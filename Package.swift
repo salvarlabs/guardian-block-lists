@@ -6,8 +6,9 @@ import PackageDescription
 let package = Package(
     name: "GuardianBlockLists",
     products: [
-        .library(name: "GuardianBlockLists", targets: ["GuardianBlockLists"]),
-        .executable(name: "GuardianBlockListsUpdater", targets: ["GuardianBlockListsUpdater"])
+        .library(
+            name: "GuardianBlockLists",
+            targets: ["GuardianBlockLists"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -25,9 +26,6 @@ let package = Package(
                 .copy("./Lists/keywordlist.txt"),
                 .copy("./Lists/urllist.txt"),
             ]),
-        .target(
-            name: "GuardianBlockListsUpdater",
-            dependencies: []),
         .testTarget(
             name: "GuardianBlockListsTests",
             dependencies: ["GuardianBlockLists"]),
