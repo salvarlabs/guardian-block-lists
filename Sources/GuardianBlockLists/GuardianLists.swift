@@ -1,10 +1,10 @@
 import Foundation
 
 public struct GuardianListNames {
-    static let kAdsFile = "adlist"
-    static let kHostFile = "contentlist"
-    static let kKeywordsFile = "keywordlist"
-    static let kUrlsFile = "urllist"
+    public static let kAdsFile = "adlist"
+    public static let kHostFile = "contentlist"
+    public static let kKeywordsFile = "keywordlist"
+    public static let kUrlsFile = "urllist"
 }
 
 public enum GLists {
