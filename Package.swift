@@ -7,7 +7,7 @@ let package = Package(
     name: "GuardianBlockLists",
     products: [
         .library(name: "GuardianBlockLists", targets: ["GuardianBlockLists"]),
-        .executable(name: "GuardianBlockListsUpdater", targets: ["GuardianBlockLists"])
+        .executable(name: "GuardianBlockListsUpdater", targets: ["GuardianBlockListsUpdater"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,8 +20,14 @@ let package = Package(
             name: "GuardianBlockLists",
             dependencies: [],
             resources: [
-                .process("adlist.txt")
+                .copy("./Lists/adlist.txt"),
+                .copy("./Lists/contentlist.txt"),
+                .copy("./Lists/keywordlist.txt"),
+                .copy("./Lists/urllist.txt"),
             ]),
+        .target(
+            name: "GuardianBlockListsUpdater",
+            dependencies: []),
         .testTarget(
             name: "GuardianBlockListsTests",
             dependencies: ["GuardianBlockLists"]),
