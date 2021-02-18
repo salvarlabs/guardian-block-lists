@@ -20,11 +20,12 @@ let package = Package(
         .target(
             name: "GuardianBlockLists",
             dependencies: [],
+            path: "Sources",
             resources: [
-                .copy("./Lists/adlist.txt"),
-                .copy("./Lists/contentlist.txt"),
-                .copy("./Lists/keywordlist.txt"),
-                .copy("./Lists/urllist.txt"),
+                .copy("./GuardianBlockLists/Lists/adlist.txt"),
+                .copy("./GuardianBlockLists/Lists/contentlist.txt"),
+                .copy("./GuardianBlockLists/Lists/keywordlist.txt"),
+                .copy("./GuardianBlockLists/Lists/urllist.txt"),
             ]),
         .testTarget(
             name: "GuardianBlockListsTests",
