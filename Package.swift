@@ -26,6 +26,7 @@ let package = Package(
                 .copy("./GuardianBlockLists/Lists/contentlist.txt"),
                 .copy("./GuardianBlockLists/Lists/keywordlist.txt"),
                 .copy("./GuardianBlockLists/Lists/urllist.txt"),
+                .copy("./GuardianBlockLists/Lists/blockerList.json"),
             ]),
         .testTarget(
             name: "GuardianBlockListsTests",
